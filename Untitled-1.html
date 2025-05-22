@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>J Dreams</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        .header-title:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-[#001F3F] text-white">
+<header class="flex items-center justify-between px-6 py-3 bg-[#001F3F] border-b border-[#003366]">
+    <div class="flex items-center space-x-2">
+        <img alt="SmugMug logo blue icon" class="w-6 h-6" height="24" src="https://storage.googleapis.com/a1aa/image/55c4f25a-d069-45b9-9c85-d7488ad68623.jpg" width="24"/>
+        <span class="header-title select-none">J Dreams</span>
+        <img alt="SmugMug smile icon" class="w-3 h-3" height="12" src="C:\Users\IVAN\Downloads\logo.jpg" width="12"/>
+    </div>
+    <nav class="hidden md:flex items-center space-x-6 text-xs font-semibold text-white">
+        <div class="relative group cursor-pointer">
+            <span>Features</span>
+            <i class="fas fa-caret-down ml-1 text-[10px]"></i>
+        </div>
+    </nav>
+</header>
+<main class="flex flex-col md:flex-row max-w-[1100px] mx-auto mt-10 px-6">
+    <section class="flex-1 pr-0 md:pr-12 border-r border-[#003366]">
+        <h1 class="text-white font-extrabold text-3xl md:text-4xl leading-tight mb-4 max-w-[320px]">Mission and Vision</h1>
+        <p class="text-[#D1D1D1] text-sm max-w-[320px] mb-6 leading-relaxed">
+            <strong>Mission:</strong> The mission of J-Dreams Electronics Soldering Tutorials is to provide accessible, easy-to-follow tutorials that empower individuals to repair their own electronic devices. By offering clear and practical guidance, we seek to reduce the inconvenience and stress often associated with gadget repairs. Our tutorials serve as a long-term solution that users can revisit anytime, eliminating the recurring costs typically involved in professional repair services. We aim to extend our reach globally, ensuring that even individuals in remote or underserved areas have access to quality repair education. Through our commitment to technical knowledge and user empowerment, we strive to help people better understand their gadgets—learning each component’s function and how to address common issues effectively.
+        </p>
+        <p class="text-[#D1D1D1] text-sm max-w-[320px] mb-6 leading-relaxed">
+            <strong>Vision:</strong> J-Dreams Electronics Soldering Tutorials envisions itself as a leading authority in the field of electronics repair education. We are dedicated to building a future where individuals possess the confidence and skill to repair their phones, laptops, and computers independently. Our vision includes earning recognition and accolades for our reliable and comprehensive tutorials, fostering a community of knowledgeable and self-sufficient individuals who can tackle their electronic repair needs. We aspire to create a world where everyone has the tools and knowledge to maintain and repair their devices, ultimately contributing to a more sustainable and resourceful society.
+        </p>
+        <a class="text-[#007BFF] text-sm font-semibold underline flex items-center space-x-1 w-max" href="#">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+        <p class="text-[#D1D1D1] text-sm mt-4">
+            <strong>Created by:</strong> Jaquilo Maceda BSCpE-221
+        </p>
+    </section>
+    <section class="flex-1 mt-10 md:mt-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+            <div class="relative group">
+                <iframe class="w-full h-auto object-cover rounded-sm" height="400" src="https://www.youtube.com/embed/-A2Camejx3Q" frameborder="0" allowfullscreen></iframe>
+                <button class="absolute bottom-2 right-2 bg-[#007BFF] text-white text-xs font-semibold px-2 py-1 rounded-sm opacity-90 hover:opacity-100" onclick="playVideo('-A2Camejx3Q')">Play Video 1</button>
+            </div>
+            <div class="relative group">
+                <iframe class="w-full h-auto object-cover rounded-sm" height="400" src="https://www.youtube.com/embed/Mo8KPu3SrCI" frameborder="0" allowfullscreen></iframe>
+                <button class="absolute bottom-2 right-2 bg-[#007BFF] text-white text-xs font-semibold px-2 py-1 rounded-sm opacity-90 hover:opacity-100" onclick="playVideo('Mo8KPu3SrCI')">Play Video 2</button>
+            </div>
+            <div class="relative group">
+                <iframe class="w-full h-auto object-cover rounded-sm" height="400" src="https://www.youtube.com/embed/Ef9ndODylX4" frameborder="0" allowfullscreen></iframe>
+                <button class="absolute bottom-2 right-2 bg-[#007BFF] text-white text-xs font-semibold px-2 py-1 rounded-sm opacity-90 hover:opacity-100" onclick="playVideo('Ef9ndODylX4')">Play Video 3</button>
+            </div>
+            <div class="relative group">
+                <img alt="Beautiful scenery" class="w-full h-auto object-cover rounded-sm" height="400" src="C:\Users\IVAN\Downloads\logo.jpg"/>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    function playVideo(videoId) {
+        const videoPlayer = document.querySelector(`iframe[src*="${videoId}"]`);
+        if (videoPlayer) {
+            videoPlayer.src += "?autoplay=1"; // Autoplay the video
+        }
+    }
+</script>
+</body>
+</html>
